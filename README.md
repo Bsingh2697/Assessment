@@ -19,7 +19,6 @@ npm install
 ```
 then install all pods
 ```bash
-# using npm
 cd .. & pod install
 ```
 
