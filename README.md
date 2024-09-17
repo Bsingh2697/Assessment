@@ -17,7 +17,7 @@ First install all npm packages
 # using npm
 npm install
 ```
-then install all pods
+then install all pod files
 ```bash
 cd .. & pod install
 ```
