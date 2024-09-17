@@ -75,6 +75,7 @@ Try reinstalling node_modules and pods
  
  Shopify Flashlist is used for better performance when rendering media.
 
+## Issue with the the ts extention files not working on iOS
 
 
 
