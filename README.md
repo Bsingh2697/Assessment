@@ -16,9 +16,15 @@ yarn start
 
 ## Step 2: Start the Metro Server
 First install all npm packages
-   npm install
+```bash
+# using npm
+npm install
+```
 then install all pods
-   cd .. & pod install
+```bash
+# using npm
+cd .. & pod install
+```
 
 ## Step 3: Start your Application
 
@@ -44,7 +50,7 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+If everything is set up _correctly_, you should see the application running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
 This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
 
