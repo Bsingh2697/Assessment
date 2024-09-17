@@ -23,11 +23,12 @@ const Media = () => {
     }
   }).current;
 
-  const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 });
+  const viewConfigRef = useRef({ viewAreaCoveragePercentThreshold: 50 })
 
-  const ReelItem = ({ videoUrl }: { videoUrl: string }) => {
+  const ReelItem = ({ videoUrl, index }: { videoUrl: string, index:number }) => {
     const videoRef = useRef(null);
 
+    
     return (
       <View
         style={[styles.videoContainer, { height: height - insets.bottom - 46 }]}
@@ -39,8 +40,9 @@ const Media = () => {
           resizeMode="cover"
           repeat={true}
           controls={false}
-          paused={false}
+          paused={index !== currentIndex}
           muted={false}
+          onError={(error)=>console.log(error)}
         />
       </View>
     );
@@ -48,7 +50,7 @@ const Media = () => {
 
   if (media.length < 1) {
     return (
-      <View>
+      <View style={styles.noData}>
         <Text>No data available!</Text>
       </View>
     );
@@ -75,7 +77,7 @@ const Media = () => {
       </View>
       <FlatList
         data={media}
-        renderItem={({ item }) => <ReelItem videoUrl={item.urls.mp4} />}
+        renderItem={({ item, index }) => <ReelItem videoUrl={item.urls.mp4}  index={index}/>}
         keyExtractor={(item) => item.id.toString()}
         pagingEnabled
         horizontal={false}

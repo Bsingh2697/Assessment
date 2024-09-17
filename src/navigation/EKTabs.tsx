@@ -5,20 +5,20 @@ import Media from '../screens/media';
 import Games from '../screens/games';
 import Reports from '../screens/reports';
 import Account from '../screens/account';
-import { EvTabParamList } from './types';
+import { EKTabParamList } from './types';
 import TabBar from '../components/tabBar';
 import { useAppTheme } from '../utils/theming';
 
-const Tab = createBottomTabNavigator<EvTabParamList>();
+const Tab = createBottomTabNavigator<EKTabParamList>();
 
-type TabProps = BottomTabScreenProps<EvTabParamList>;
+type TabProps = BottomTabScreenProps<EKTabParamList>;
 
 
 function TabBarWrapper(props: JSX.IntrinsicAttributes & BottomTabBarProps) {
   return <TabBar {...props} />;
 }
 
-function EvTabs() {
+function EKTabs() {
   const {colors:{secondary, theme_dark_gray}} = useAppTheme()
   return (
     <Tab.Navigator 
@@ -37,4 +37,4 @@ function EvTabs() {
     </Tab.Navigator>
   );
 }
-export {EvTabs}
+export {EKTabs}

@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     alignItems:'center'
   },
+  noData:{flex:1,justifyContent:'center',alignItems:'center'}
 });
 
 export { styles };

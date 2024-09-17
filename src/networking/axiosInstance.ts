@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const EV_AXIOS_INSTANCE = axios.create({
+const EK_AXIOS_INSTANCE = axios.create({
   baseURL: 'http://localhost:3000',
   timeout: 10_000,
   headers: {
@@ -10,4 +10,4 @@ const EV_AXIOS_INSTANCE = axios.create({
 });
 
 
-export { EV_AXIOS_INSTANCE  };
+export { EK_AXIOS_INSTANCE  };

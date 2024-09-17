@@ -1,10 +1,10 @@
 import { NavigationContainer } from "@react-navigation/native"
-import { EvStack } from "./EvStack"
+import { EKStack } from "./EKStack"
 
 function Router(){
     // Based on certain conditions we can manipulate which stack to render
     return <NavigationContainer>
-        <EvStack/>
+        <EKStack/>
     </NavigationContainer>
 }
 

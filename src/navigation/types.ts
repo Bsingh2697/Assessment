@@ -1,10 +1,11 @@
+import { Media } from "../store/types";
 import { ScreenKeys } from "./ScreenKeys";
 
-export type EvStackParamList = {
+export type EKStackParamList = {
     [ScreenKeys.TABS]: undefined;
   };
 
-export type EvTabParamList = {
+export type EKTabParamList = {
     [ScreenKeys.HOME]: undefined;
     [ScreenKeys.MEDIA]: undefined;
     [ScreenKeys.GAMES]: undefined;

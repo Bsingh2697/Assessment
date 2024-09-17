@@ -1,4 +1,4 @@
-import { EV_AXIOS_INSTANCE } from "./axiosInstance";
+import { EK_AXIOS_INSTANCE } from "./axiosInstance";
 
 interface RequestConfig {
     url: string;
@@ -10,7 +10,7 @@ export const requestHandler = async({
     method,
 }:RequestConfig) => {
     try{
-        const response = await EV_AXIOS_INSTANCE({
+        const response = await EK_AXIOS_INSTANCE({
             url,
             method
         })

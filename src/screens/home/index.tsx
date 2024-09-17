@@ -13,18 +13,18 @@ import { FlashList } from "@shopify/flash-list";
 import Video from "react-native-video";
 import { styles } from "./home.styles";
 import { ScreenKeys } from "../../navigation/ScreenKeys";
-import { EvTabParamList } from "../../navigation/types";
+import { EKTabParamList } from "../../navigation/types";
 import { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 import { CompositeScreenProps } from "@react-navigation/native";
 import { StackScreenProps } from "@react-navigation/stack";
 
-export type Ev_TabsProps<T extends keyof EvTabParamList> =
+export type EK_TabsProps<T extends keyof EKTabParamList> =
   CompositeScreenProps<
-    BottomTabScreenProps<EvTabParamList, T>,
-    StackScreenProps<EvTabParamList>
+    BottomTabScreenProps<EKTabParamList, T>,
+    StackScreenProps<EKTabParamList>
   >;
 
-type Props = Ev_TabsProps<ScreenKeys.HOME>
+type Props = EK_TabsProps<ScreenKeys.HOME>
 
 const Home = ({navigation}:Props) => {
   const media = useAppSelector((state) => state.media.media);
@@ -87,13 +87,12 @@ const Home = ({navigation}:Props) => {
           </View>
         </Surface>
         <Divider style={{ marginTop: 24 }} />
-        <TouchableOpacity
+        <View
           style={styles.mediaTitle}
-          onPress={()=>navigation.navigate(ScreenKeys.MEDIA)}
         >
           <Icon size={24} source={"play"} color={primary}/>
           <Text style={[medium, { fontSize: 16, marginStart: 2 }]}>Media</Text>
-        </TouchableOpacity>
+        </View>
         {media && (
           <FlashList
             data={media}
@@ -105,11 +104,13 @@ const Home = ({navigation}:Props) => {
               <View
                 style={styles.videoContainer}
               >
-                <View>
+                <TouchableOpacity
+                  onPress={()=>navigation.navigate(ScreenKeys.MEDIA)}
+                >
                 <Video
                   source={{ uri: item.urls?.mp4 }}
                   style={styles.videoStyle}
-                /></View>
+                /></TouchableOpacity>
               </View>
             )}
           />
