@@ -1,10 +1,15 @@
 import { View } from "react-native";
+import ScreenContainer from "../../components/screenContainer";
+import { Text } from "react-native-paper";
+import { styles } from "./reports.styles";
 
 const Reports = () => {
     return (
-        <View>
-            
+        <ScreenContainer>
+        <View style={styles.container}>
+            <Text style={{fontSize:20}}>Report</Text>
         </View>
+        </ScreenContainer>
     );
 }
 
