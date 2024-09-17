@@ -65,11 +65,11 @@ Try reinstalling node_modules and pods
 
 ## Details
 
-# React native 0.75.3 is used for this assignment.
-# React navigation is used for navigating across the screen.
-# React Redux Toolkit is being used to maintaining the store across the app along with async storage and Redux Persist.
-# React Native Paper is used for maintaining the theeme and other components across the application.
-# Shopify Flashlist is used for better performance when rendering media.
+### React native 0.75.3 is used for this assignment.
+### React navigation is used for navigating across the screen.
+### React Redux Toolkit is being used to maintaining the store across the app along with async storage and Redux Persist.
+### React Native Paper is used for maintaining the theeme and other components across the application.
+## Shopify Flashlist is used for better performance when rendering media.
 
 
 
